@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 import { createUser } from '../services/userAPI';
 
+/**
+ * Consultei o repositório do Paulo Renan Almeida para resolver essa parte.
+ * Link do repositório: https://github.com/tryber/sd-014-a-project-trybetunes/pull/19/commits/c72f1ed68af91cfd18726a1ce27634bc3fb6fd5d
+ */
 class Login extends Component {
   constructor() {
     super();
