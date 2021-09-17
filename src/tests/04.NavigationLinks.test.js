@@ -10,7 +10,7 @@ import renderPath from './helpers/renderPath';
 import { defaultUser, musicAPIDefaultResponse} from './mocks';
 
 
-describe.ship('4 - Crie os links de navegação no cabeçalho', () => {
+describe('4 - Crie os links de navegação no cabeçalho', () => {
   beforeEach(() => {
     localStorage.setItem('user', JSON.stringify(defaultUser));
     localStorage.setItem('favorite_songs', JSON.stringify([]));

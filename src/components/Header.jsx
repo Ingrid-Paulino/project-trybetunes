@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Loading from '../pages/Loading';
-// import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 
 class Header extends Component {
@@ -31,11 +31,12 @@ class Header extends Component {
         data-testid="header-component"
       >
         <p data-testid="header-user-name">{ name }</p>
-        {/* <nav>
-          <Link to="/search" data-testid="link-to-search">Procurar</Link>
-          <Link to="/favorites" data-testid="link-to-favorites">Favoritos</Link>
-          <Link to="profile" data-testid="link-to-profile">Perfil</Link>
-        </nav> */}
+
+        <nav>
+          <Link data-testid="link-to-search" to="/search">Pesquisar</Link>
+          <Link data-testid="link-to-favorites" to="/favorites">Favoritos</Link>
+          <Link data-testid="link-to-profile" to="/profile">Perfil</Link>
+        </nav>
       </header>
     );
   }
