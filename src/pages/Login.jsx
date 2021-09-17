@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 import { createUser } from '../services/userAPI';
+import Loading from './Loading';
 
 /**
  * Consultei o repositório do Paulo Renan Almeida para resolver essa parte.
@@ -37,7 +38,7 @@ class Login extends Component {
     const { nameLogin, loading, logado } = this.state;
     const MIN_LENGTH = 3;
 
-    if (loading) return (<p>Carregando...</p>);
+    if (loading) return <Loading />;
     if (logado) return (<Redirect to="/search" />);
 
     return (
