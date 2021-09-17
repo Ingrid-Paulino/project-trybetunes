@@ -5,7 +5,7 @@ import * as searchAlbumsAPI from '../services/searchAlbumsAPI';
 import renderPath from './helpers/renderPath';
 import { defaultUser, searchAlbumDefaultResponse } from './mocks';
 
-describe('6 - Faça a requisição para pesquisar artistas', () => {
+describe.ship('6 - Faça a requisição para pesquisar artistas', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
     localStorage.setItem('user', JSON.stringify(defaultUser));

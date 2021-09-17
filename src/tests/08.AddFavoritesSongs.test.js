@@ -6,7 +6,7 @@ import * as favoriteSongsAPI from '../services/favoriteSongsAPI';
 import renderPath from './helpers/renderPath';
 import { defaultUser, musicAPIDefaultResponse } from './mocks';
 
-describe('8 - Crie o mecanismo para adicionar músicas na lista de músicas favoritas', () => {
+describe.ship('8 - Crie o mecanismo para adicionar músicas na lista de músicas favoritas', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
     localStorage.setItem('user', JSON.stringify(defaultUser));

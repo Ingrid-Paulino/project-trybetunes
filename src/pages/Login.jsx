@@ -36,8 +36,10 @@ class Login extends Component {
   render() {
     const { nameLogin, loading, logado } = this.state;
     const MIN_LENGTH = 3;
+
     if (loading) return (<p>Carregando...</p>);
     if (logado) return (<Redirect to="/search" />);
+
     return (
       <div data-testid="page-login">
         <form>
@@ -55,7 +57,7 @@ class Login extends Component {
           <button
             type="button"
             disabled={ nameLogin.length < MIN_LENGTH }
-            onClick={ () => this.criarUsuario() }
+            onClick={ this.criarUsuario }
             data-testid="login-submit-button"
           >
             Entrar

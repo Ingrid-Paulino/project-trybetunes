@@ -9,7 +9,7 @@ import * as musicsAPI from '../services/musicsAPI';
 import renderPath from './helpers/renderPath';
 import { defaultUser, musicAPIDefaultResponse} from './mocks';
 
-describe('3 - Crie um componente de cabeçalho', () => {
+describe.ship('3 - Crie um componente de cabeçalho', () => {
   beforeEach(() => {
     localStorage.setItem('user', JSON.stringify(defaultUser));
     localStorage.setItem('favorite_songs', JSON.stringify([]));

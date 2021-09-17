@@ -9,7 +9,7 @@ import * as userAPI from '../services/userAPI';
 import renderPath from './helpers/renderPath';
 import { defaultUser } from './mocks';
 
-describe('11 - Crie a exibição de perfil', () => {
+describe.ship('11 - Crie a exibição de perfil', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
     localStorage.setItem('user', JSON.stringify(defaultUser));
