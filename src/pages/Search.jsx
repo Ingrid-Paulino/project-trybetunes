@@ -4,6 +4,11 @@ import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from './Loading';
 
+/**
+ * Consultei o repositório do Paulo Renan Almeida para resolver essa parte.
+ * Link do repositório: https://github.com/tryber/sd-014-a-project-trybetunes/pull/19/commits/c72f1ed68af91cfd18726a1ce27634bc3fb6fd5d
+ */
+
 class Search extends Component {
   constructor() {
     super();
@@ -65,15 +70,14 @@ class Search extends Component {
         {album.map(
           ({ artistName, collectionId, collectionName, artworkUrl100 }, index) => (
             <div key={ index }>
-              <p>{collectionName}</p>
-              <p>{artistName}</p>
-              <img src={ artworkUrl100 } alt="AlbumIMG" />
               <Link
                 data-testid={ `link-to-album-${collectionId}` }
                 to={ `album/${collectionId}` }
               >
-                Ir Para o Album
+                <img src={ artworkUrl100 } alt="AlbumIMG" />
               </Link>
+              <p>{collectionName}</p>
+              <p>{artistName}</p>
             </div>
           ),
         )}
