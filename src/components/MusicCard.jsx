@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../css/heart-favorite.css';
 
 class MusicCard extends Component {
   musics = () => {
@@ -26,8 +27,8 @@ class MusicCard extends Component {
         </audio>
         <label
           htmlFor={ trackId }
+          className="fav-heart"
         >
-          Favorita
           <input
             type="checkbox"
             name="favorite"
@@ -36,6 +37,7 @@ class MusicCard extends Component {
             value={ value }
             data-testid={ `checkbox-music-${trackId}` }
           />
+          <span className="tw-heart" />
         </label>
       </section>
     );
