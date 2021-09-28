@@ -4,7 +4,7 @@ import * as musicsAPI from '../services/musicsAPI';
 import renderPath from './helpers/renderPath';
 import { defaultUser, musicAPIDefaultResponse } from './mocks';
 
-describe.ship('7 - Crie a lista de músicas do álbum selecionado', () => {
+describe('7 - Crie a lista de músicas do álbum selecionado', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
     localStorage.setItem('user', JSON.stringify(defaultUser));

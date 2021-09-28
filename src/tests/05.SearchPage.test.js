@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import renderPath from './helpers/renderPath';
 import { defaultUser } from './mocks';
 
-describe.skip('5 - Crie o formulário para pesquisar artistas', () => {
+describe('5 - Crie o formulário para pesquisar artistas', () => {
   beforeEach(() => {
     localStorage.setItem('user', JSON.stringify(defaultUser));
     jest.restoreAllMocks();

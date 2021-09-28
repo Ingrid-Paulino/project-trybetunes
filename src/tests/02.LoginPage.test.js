@@ -7,7 +7,7 @@ import userEvent from '@testing-library/user-event';
 import * as userAPI from '../services/userAPI';
 import renderPath from './helpers/renderPath';
 
-describe.ship('2 - Crie um formulário para identificação', () => {
+describe('2 - Crie um formulário para identificação', () => {
   beforeEach(() => {
     localStorage.clear();
     jest.restoreAllMocks();

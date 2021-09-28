@@ -4,6 +4,8 @@ import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from './Loading';
 
+import '../App.css';
+
 /**
  * Consultei o repositório do Paulo Renan Almeida para resolver essa parte.
  * Link do repositório: https://github.com/tryber/sd-014-a-project-trybetunes/pull/19/commits/c72f1ed68af91cfd18726a1ce27634bc3fb6fd5d
@@ -34,7 +36,7 @@ class Search extends Component {
     const MIN_LENGTH = 2;
     const { nome } = this.state;
     return (
-      <form>
+      <form className="main">
         <label htmlFor="artista-input">
           <input
             type="text"
@@ -44,6 +46,7 @@ class Search extends Component {
             onChange={ this.handleChange }
             placeholder="Nome do Artista"
             data-testid="search-artist-input"
+            className="input-pesquisa"
           />
         </label>
         <button
@@ -64,23 +67,25 @@ class Search extends Component {
     const numeroAlbum = `${album.length} álbuns encontrados.`;
     const results = `Resultado de álbuns de: ${artist}`;
     return (
-      <div>
+      <div className="albumCss">
         <p>{results}</p>
         {album.length ? <p>{numeroAlbum}</p> : <p>Nenhum álbum foi encontrado</p>}
-        {album.map(
-          ({ artistName, collectionId, collectionName, artworkUrl100 }, index) => (
-            <div key={ index }>
-              <Link
-                data-testid={ `link-to-album-${collectionId}` }
-                to={ `album/${collectionId}` }
-              >
-                <img src={ artworkUrl100 } alt="AlbumIMG" />
-              </Link>
-              <p>{collectionName}</p>
-              <p>{artistName}</p>
-            </div>
-          ),
+        <div className="cc">
+          {album.map(
+            ({ artistName, collectionId, collectionName, artworkUrl100 }, index) => (
+              <div className="album-container" key={ index }>
+                <Link
+                  data-testid={ `link-to-album-${collectionId}` }
+                  to={ `album/${collectionId}` }
+                >
+                  <img src={ artworkUrl100 } alt="AlbumIMG" />
+                </Link>
+                <p>{collectionName}</p>
+                <p>{artistName}</p>
+              </div>
+            ),
         )}
+        </div>
       </div>
     );
   };

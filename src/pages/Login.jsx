@@ -42,10 +42,9 @@ class Login extends Component {
     if (logado) return (<Redirect to="/search" />);
 
     return (
-      <div data-testid="page-login">
+      <div data-testid="page-login main">
         <form>
           <label htmlFor="login-name">
-            Nome:
             <input
               type="text"
               id="login-name"
@@ -53,6 +52,8 @@ class Login extends Component {
               value={ nameLogin }
               onChange={ this.handleChange }
               data-testid="login-name-input"
+              className="input-pesquisa"
+              placeholder="Name"
             />
           </label>
           <button

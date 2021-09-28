@@ -5,6 +5,7 @@ import getMusicsAPI from '../services/musicsAPI';
 import Loading from './Loading';
 import MusicCard from '../components/MusicCard';
 import { addSong, removeSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
+import '../App.css';
 
 class Album extends Component {
   constructor() {

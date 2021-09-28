@@ -5,7 +5,7 @@ import renderPath from './helpers/renderPath';
 import { defaultUser, musicAPIDefaultResponse } from './mocks';
 
 
-describe.ship('1 - Crie as rotas necessárias para a aplicação', () => {
+describe('1 - Crie as rotas necessárias para a aplicação', () => {
   beforeEach(() => {
     localStorage.setItem('user', JSON.stringify(defaultUser));
     localStorage.setItem('favorite_songs', JSON.stringify([]));
