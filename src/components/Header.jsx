@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Loading from '../pages/Loading';
 import { getUser } from '../services/userAPI';
+import trybetunesLogo from '../img/logo.png';
 
 import '../App.css';
 
@@ -33,12 +34,44 @@ class Header extends Component {
         data-testid="header-component"
         className="header"
       >
-        <p data-testid="header-user-name">{ name }</p>
+        <div
+          className="header-part-1"
+        >
+          <Link to="/search">
+            <img
+              src={ trybetunesLogo }
+              alt="trybrtunes logo"
+              className="header-logo"
+            />
+          </Link>
+          <Link
+            className="header-user"
+            to="/profile"
+          >
+            <p
+              data-testid="header-user-name"
+            >
+              { name }
+            </p>
+          </Link>
+        </div>
 
-        <nav>
-          <Link data-testid="link-to-search" to="/search">Pesquisar</Link>
-          <Link data-testid="link-to-favorites" to="/favorites">Favoritos</Link>
-          <Link data-testid="link-to-profile" to="/profile">Perfil</Link>
+        <nav className="nav-container">
+          <Link
+            data-testid="link-to-search"
+            className="link"
+            to="/search"
+          >
+            Pesquisar
+          </Link>
+          <Link
+            data-testid="link-to-favorites"
+            className="link"
+            to="/favorites"
+          >
+            Favoritos
+          </Link>
+          <Link data-testid="link-to-profile" className="link" to="/profile">Perfil</Link>
         </nav>
       </header>
     );

@@ -36,7 +36,7 @@ class Search extends Component {
     const MIN_LENGTH = 2;
     const { nome } = this.state;
     return (
-      <form className="main">
+      <form className="main input-button">
         <label htmlFor="artista-input">
           <input
             type="text"
@@ -64,13 +64,17 @@ class Search extends Component {
   resultsListAlbum = () => {
     const { artist, album } = this.state;
     if (artist === '') return null;
-    const numeroAlbum = `${album.length} álbuns encontrados.`;
+    const numeroAlbum = `${album.length} álbuns encontrados`;
     const results = `Resultado de álbuns de: ${artist}`;
     return (
-      <div className="albumCss">
-        <p>{results}</p>
-        {album.length ? <p>{numeroAlbum}</p> : <p>Nenhum álbum foi encontrado</p>}
-        <div className="cc">
+      <div className="container-album">
+        <div className="result-album-container">
+          <p className="result-album">{results}</p>
+          {album.length ? <p className="result-album">{numeroAlbum}</p>
+            : <p>Nenhum álbum foi encontrado</p>}
+        </div>
+
+        <div className="albuns">
           {album.map(
             ({ artistName, collectionId, collectionName, artworkUrl100 }, index) => (
               <div className="album-container" key={ index }>
@@ -84,7 +88,7 @@ class Search extends Component {
                 <p>{artistName}</p>
               </div>
             ),
-        )}
+          )}
         </div>
       </div>
     );

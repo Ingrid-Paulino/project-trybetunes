@@ -15,11 +15,15 @@ class MusicCard extends Component {
       value,
       onChange,
       checked } = this.props;
-
+      // console.log(trackName);
     return (
       <section>
         <p>{ trackName }</p>
-        <audio data-testid="audio-component" src={ previewUrl } controls>
+        <audio
+          data-testid="audio-component"
+          src={ previewUrl }
+          controls
+        >
           <track kind="captions" />
           O seu navegador não suporta o elemento
           <code>audio</code>

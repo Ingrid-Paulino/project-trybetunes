@@ -72,10 +72,16 @@ class Album extends Component {
   musicCard = () => {
     const { musicas, favorite } = this.state;
     return (
-      <main>
-        <img src={ musicas[0].artworkUrl100 } alt="Imagem album" />
-        <h2 data-testid="artist-name">{musicas[0].artistName}</h2>
-        <h3 data-testid="album-name">{musicas[0].collectionName}</h3>
+      <main className="musics-container">
+        <section className="section-part1">
+          <img
+            src={ musicas[0].artworkUrl100 }
+            alt="Imagem album"
+            className="img-album"
+          />
+          <h2 data-testid="artist-name">{musicas[0].artistName}</h2>
+          <h3 data-testid="album-name">{musicas[0].collectionName}</h3>
+        </section>
         <section>
           {musicas.slice(1).map((musica) => (
             <MusicCard
