@@ -15,15 +15,15 @@
 
 ## Desenvolvido
 Neste projeto criei o TrybeTunes, uma aplicação capaz de reproduzir músicas das mais variadas bandas e artistas.
-[x] Fazer login;
-[x] Pesquisar por uma banda ou artista;
-[x] Listar os álbuns disponíveis dessa banda ou artista;
-[x] Visualizar as músicas de um álbum selecionado;
-[x] Reproduzir uma prévia das músicas deste álbum;
-[x] Favoritar e desfavoritar músicas;
-[ ] Ver a lista de músicas favoritas;
-[ ] Ver o perfil da pessoa logada;
-[ ] Editar o perfil da pessoa logada;
+- [x] Fazer login;
+- [x] Pesquisar por uma banda ou artista;
+- [x] Listar os álbuns disponíveis dessa banda ou artista;
+- [x] Visualizar as músicas de um álbum selecionado;
+- [x] Reproduzir uma prévia das músicas deste álbum;
+- [x] Favoritar e desfavoritar músicas;
+- [ ] Ver a lista de músicas favoritas;
+- [ ] Ver o perfil da pessoa logada;
+- [ ] Editar o perfil da pessoa logada;
 
 ## ESLint e Stylelint
 Para garantir a qualidade do código, utilizei neste projeto os linters ESLint e Stylelint. Assim o código estará alinhado com as boas práticas de desenvolvimento, sendo mais legível e de fácil manutenção! Para rodá-los localmente no projeto, execute os comandos abaixo:
