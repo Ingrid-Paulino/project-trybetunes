@@ -9,6 +9,10 @@
 - Usar o componente Redirect pra redirecionar para uma rota específica;
 - Criar links de navegação na aplicação com o componente Link;
 
+<img src="Captura de tela de 2022-05-03 07-38-03.png">
+<img src="Captura de tela de 2022-05-03 07-38-47.png">
+
+
 ## Desenvolvido
 Neste projeto criei o TrybeTunes, uma aplicação capaz de reproduzir músicas das mais variadas bandas e artistas.
 [x] Fazer login;
